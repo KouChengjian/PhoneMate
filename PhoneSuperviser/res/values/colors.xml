@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ationBar -->
+    <item name="gray_drawable" type="drawable">#FF2c5aa9</item>
+    <drawable name="transparent">#00000000</drawable>
+    
+    <color name="white">#FFFFFF</color>
+    <color name="ldrawer_color">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="card_pressed">#19000000</color>
+    <color name="card_normal">#e6ffffff</color>
+    <color name="green_6a">#FF2c5aa9</color>
+    <color name="text_color">#414141</color>
+    
+    <item name="title_bg" type="color" >#FF2c5aa9</item>
+    <item name="drawer_bg_color_normal" type="color">#00ffffff</item>
+    <item name="drawer_bg_color_press" type="color">#ffeeeeee</item>
+    <item name="drawer_bg_color_white" type="color">#ff2d353f</item>
+    <item name="drawer_bg_color_divide" type="color">#ff243040</item>
+    <item name="drawer_bg_color_bottom" type="color">#ff1e2733</item>
+    
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+    
+</resources>

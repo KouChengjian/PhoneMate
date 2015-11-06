@@ -1,0 +1,139 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:counter="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_container1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:background="@color/title_bg"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <com.kcj.phonesuperviser.widget.waveview.WaveView
+                android:id="@+id/wave_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/title_bg"
+                android:visibility="gone"
+                wave:above_wave_color="@android:color/white"
+                wave:blow_wave_color="@android:color/white"
+                wave:progress="50"
+                wave:wave_height="little"
+                wave:wave_hz="normal"
+                wave:wave_length="middle" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <com.kcj.phonesuperviser.widget.textcounter.CounterView
+                    android:id="@+id/textCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="250"
+                    android:textColor="@color/white"
+                    android:textSize="48sp"
+                    counter:autoStart="false" />
+
+                <TextView
+                    android:id="@+id/sufix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_right"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@+id/textCounter"
+                    android:text="KB"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_middle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sufix"
+                    android:layout_marginLeft="@dimen/margin_right"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@+id/textCounter"
+                    android:text="可清理内存"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_middle" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            android:background="#e2e2e2"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="4dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="true"
+            android:fitsSystemWindows="true"
+            android:focusable="true"
+            android:listSelector="@android:color/transparent"
+            android:padding="12dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            tools:ignore="overdraw" />
+
+        <LinearLayout
+            android:id="@+id/bottom_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:background="@drawable/btn_normal_green"
+                android:gravity="center"
+                android:text="一键清理"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/windowBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+        
+        <com.kcj.phonesuperviser.widget.circularprogressbar.CircularProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:indeterminate="true"
+            app:cpb_colors="@array/gplus_colors" />
+        <TextView
+            android:id="@+id/progressBarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dip"
+            android:singleLine="true"
+            android:text="@string/scanning"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+</FrameLayout>
